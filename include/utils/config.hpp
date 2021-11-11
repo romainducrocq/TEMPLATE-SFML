@@ -13,7 +13,6 @@ struct DefaultConf
     const static int BG_COL[3];
     const static int FRAMERATE;
     const static int ANTIALIAS;
-    const static bool VSYNC;
 
     static int WIN_W;
     static int WIN_H;
@@ -68,8 +67,6 @@ template<typename T>
 const int DefaultConf<T>::FRAMERATE = 24;
 template<typename T>
 const int DefaultConf<T>::ANTIALIAS = 0;
-template<typename T>
-const bool DefaultConf<T>::VSYNC = false;
 
 template<typename T>
 int DefaultConf<T>::WIN_W = 720;
