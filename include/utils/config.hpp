@@ -21,17 +21,17 @@ struct DefaultConf
     static bool argParse(int argc, char** argv)
     {
         for(;;){
-            switch(getopt(argc, argv, "hR:")){
+            switch(getopt(argc, argv, "hr:")){
                 case '?':
                 case 'h':
                 default :
-                    std::cerr << "usage: app/exec [-h] [-R RES] [-S SIZE]\n";
+                    std::cerr << "usage: app/exec [-h] [-r RES]\n";
                     std::cerr << "\n";
                     std::cerr << DefaultConf<T>::NAME << "\n";
                     std::cerr << "\n";
                     std::cerr << "optional args:\n";
                     std::cerr << "  -h      show this help message and exit\n";
-                    std::cerr << "  -R RES  set resolution < 480p | 720p > \n";
+                    std::cerr << "  -r RES  set resolution < 480p | 720p > \n";
                     std::cerr << "\n";
                     std::cerr << "optional cmds:\n";
                     std::cerr << "  key S   set speed 24FPS, VSYNC, MAX    \n";
@@ -42,7 +42,7 @@ struct DefaultConf
                 case -1:
                     break;
 
-                case 'R': // SIZE
+                case 'r':
                     if(std::strcmp(optarg, "480p") == 0){
                         DefaultConf<T>::WIN_W = 720;
                         DefaultConf<T>::WIN_H = 480;
