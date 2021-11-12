@@ -24,7 +24,7 @@ struct DefaultConf
                 case '?':
                 case 'h':
                 default :
-                    std::cerr << "usage: app/exec [-h] [-r RES]\n";
+                    std::cerr << "usage: apps/exec [-h] [-r RES]\n";
                     std::cerr << "\n";
                     std::cerr << DefaultConf<T>::NAME << "\n";
                     std::cerr << "\n";
